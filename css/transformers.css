@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+/* For mobile */
+
+.purple {
+	background-color: purple;
+	padding: 150px;
+}
+.purplelist {
+	
+}
+.red {
+	background-color: red;
+	padding: 150px;
+}
+
+.top {
+	display: flex;
+	list-style: none;
+}
+
+.bottom {
+	display: flex;
+	list-style: none;
+}
+
+
+
+li {
+	flex: 1;
+}
+
+button {
+	
+}
+select {
+	
+}
+
+option {
+
+}
+
+#top1 {
+	visibility: hidden;
+}
+#top2 {
+	visibility: hidden;
+}
+#top3 {
+	visibility: hidden;
+}
+#top4 {
+	visibility: hidden;
+}

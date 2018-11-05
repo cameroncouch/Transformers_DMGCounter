@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script type="text/javascript" src="./js/transformers.js"></script>
+	<link href="./css/transformers.css" type="text/css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+		<title>
+			Transformers TCG Damage Counter
+		</title>
+<!-- Styling - some inline style exists -->
+	<style>
+#healthP {
+	display: flex;
+    justify-content: space-between;
+	background-color: yellow;
+}
+#purplebut {
+	
+}
+#purpleact {
+}
+#purpleselect {
+	display: flex;
+	justify-content: space-around;
+}
+#bgchangewrapper {
+}
+.healthPNum {
+	margin: 0px;
+}
+.top1 {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0px;
+}
+.top2 {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0px;
+}
+input {
+	margin: 0px;
+}
+li {
+	width: max-content;
+	margin: 0;
+}
+button {
+	border-radius: 0px;
+}
+select {
+}
+option {
+}
+	</style>
+	</head>
+	<body>
+		<div id="purpleselect">
+			<select id="top1" onchange="getHealth1(), changeBG1()" style="visibility:hidden;">
+				<option>--Select Your Transformer--</option>
+				<option value="arceew1">Arcee</option>
+				<option value="cosmosw1">Cosmos</option>
+				<option value="houndw1">Hound</option>
+				<option value="jazzw1">Jazz</option>
+				<option value="miragew1">Mirage</option>
+				<option value="barragew1">Barrage</option>
+				<option value="bombshellw1">Bombshell</option>
+				<option value="bumblebeecomw1">Bumblebee(C)</option>
+				<option value="bumblebeeSt">Bumblebee(ST)</option>
+				<option value="bumblebeesurarw1">Bumblebee(SR)</option>
+				<option value="chopshopw1">Chop Shop</option>
+				<option value="chromiaw1">Chromia</option>
+				<option value="cliffjumperp1">Cliff Jumper</option>
+				<option value="darkmountw1">Darkmount</option>
+				<option value="deadlockw1">Deadlock</option>
+				<option value="shockwavew1">Shockwave</option>
+				<option value="demolisherw1">Demolisher</option>
+				<option value="sludgew1">Sludge</option>
+				<option value="slugw1">Slug</option>
+				<option value="snarlw1">Snarl</option>
+				<option value="swoopw1">Swoop</option>
+				<option value="flamewarw1">Flamewar</option>
+				<option value="grimlockw1">Grimlock</option>
+				<option value="infernow1">Inferno</option>
+				<option value="skrapnelw1">Skrapnel</option>
+				<option value="ironhideSt">Ironhide</option>
+				<option value="jetfirew1">Jetfire</option>
+				<option value="kickbackw1">Kickback</option>
+				<option value="megatroncomw1">Megatron(C)</option>
+				<option value="megatronrarw1">Megatron(R)</option>
+				<option value="nemesisprimew1">Nemesis Prime</option>
+				<option value="optimusprimerarw1">Optimus Prime(R)</option>
+				<option value="optimusprimecomw1">Optimus Prime(C)</option>
+				<option value="optimusprimeSt">Optimus Prime(ST)</option>
+				<option value="prowlw1">Prowl</option>
+				<option value="ramjetw1">Ramjet</option>
+				<option value="ransackw1">Ransack</option>
+				<option value="redalertSt">Red Alert</option>
+				<option value="sergeantkupw1">Sergeant Kup</option>
+				<option value="skywarpw1">Skywarp</option>
+				<option value="slipstreamp1">Slipstream</option>
+				<option value="starscreamcomw1">Starscream(C)</option>
+				<option value="starscreamuncw1">Starscream(U)</option>
+				<option value="sunstormw1">Sunstorm</option>
+				<option value="thundercrackerw1">Thundercracker</option>
+				<option value="wheeljackw1">Wheeljack</option>
+			</select>
+			<select id="top2" onchange="getHealth2()" style="visibility:hidden;">
+				<option>--Select Your Transformer--</option>
+				<option value="arceew1">Arcee</option>
+				<option value="cosmosw1">Cosmos</option>
+				<option value="houndw1">Hound</option>
+				<option value="jazzw1">Jazz</option>
+				<option value="miragew1">Mirage</option>
+				<option value="barragew1">Barrage</option>
+				<option value="bombshellw1">Bombshell</option>
+				<option value="bumblebeecomw1">Bumblebee(C)</option>
+				<option value="bumblebeeSt">Bumblebee(ST)</option>
+				<option value="bumblebeesurarw1">Bumblebee(SR)</option>
+				<option value="chopshopw1">Chop Shop</option>
+				<option value="chromiaw1">Chromia</option>
+				<option value="cliffjumperp1">Cliff Jumper</option>
+				<option value="darkmountw1">Darkmount</option>
+				<option value="deadlockw1">Deadlock</option>
+				<option value="shockwavew1">Shockwave</option>
+				<option value="demolisherw1">Demolisher</option>
+				<option value="sludgew1">Sludge</option>
+				<option value="slugw1">Slug</option>
+				<option value="snarlw1">Snarl</option>
+				<option value="swoopw1">Swoop</option>
+				<option value="flamewarw1">Flamewar</option>
+				<option value="grimlockw1">Grimlock</option>
+				<option value="infernow1">Inferno</option>
+				<option value="skrapnelw1">Skrapnel</option>
+				<option value="ironhideSt">Ironhide</option>
+				<option value="jetfirew1">Jetfire</option>
+				<option value="kickbackw1">Kickback</option>
+				<option value="megatroncomw1">Megatron(C)</option>
+				<option value="megatronrarw1">Megatron(R)</option>
+				<option value="nemesisprimew1">Nemesis Prime</option>
+				<option value="optimusprimerarw1">Optimus Prime(R)</option>
+				<option value="optimusprimecomw1">Optimus Prime(C)</option>
+				<option value="optimusprimeSt">Optimus Prime(ST)</option>
+				<option value="prowlw1">Prowl</option>
+				<option value="ramjetw1">Ramjet</option>
+				<option value="ransackw1">Ransack</option>
+				<option value="redalertSt">Red Alert</option>
+				<option value="sergeantkupw1">Sergeant Kup</option>
+				<option value="skywarpw1">Skywarp</option>
+				<option value="slipstreamp1">Slipstream</option>
+				<option value="starscreamcomw1">Starscream(C)</option>
+				<option value="starscreamuncw1">Starscream(U)</option>
+				<option value="sunstormw1">Sunstorm</option>
+				<option value="thundercrackerw1">Thundercracker</option>
+				<option value="wheeljackw1">Wheeljack</option>
+			</select>
+			<select id="top3" onchange="getHealth3()" style="visibility:hidden;">
+				<option>--Select Your Transformer--</option>
+				<option value="arceew1">Arcee</option>
+				<option value="cosmosw1">Cosmos</option>
+				<option value="houndw1">Hound</option>
+				<option value="jazzw1">Jazz</option>
+				<option value="miragew1">Mirage</option>
+				<option value="barragew1">Barrage</option>
+				<option value="bombshellw1">Bombshell</option>
+				<option value="bumblebeecomw1">Bumblebee(C)</option>
+				<option value="bumblebeeSt">Bumblebee(ST)</option>
+				<option value="bumblebeesurarw1">Bumblebee(SR)</option>
+				<option value="chopshopw1">Chop Shop</option>
+				<option value="chromiaw1">Chromia</option>
+				<option value="cliffjumperp1">Cliff Jumper</option>
+				<option value="darkmountw1">Darkmount</option>
+				<option value="deadlockw1">Deadlock</option>
+				<option value="shockwavew1">Shockwave</option>
+				<option value="demolisherw1">Demolisher</option>
+				<option value="sludgew1">Sludge</option>
+				<option value="slugw1">Slug</option>
+				<option value="snarlw1">Snarl</option>
+				<option value="swoopw1">Swoop</option>
+				<option value="flamewarw1">Flamewar</option>
+				<option value="grimlockw1">Grimlock</option>
+				<option value="infernow1">Inferno</option>
+				<option value="skrapnelw1">Skrapnel</option>
+				<option value="ironhideSt">Ironhide</option>
+				<option value="jetfirew1">Jetfire</option>
+				<option value="kickbackw1">Kickback</option>
+				<option value="megatroncomw1">Megatron(C)</option>
+				<option value="megatronrarw1">Megatron(R)</option>
+				<option value="nemesisprimew1">Nemesis Prime</option>
+				<option value="optimusprimerarw1">Optimus Prime(R)</option>
+				<option value="optimusprimecomw1">Optimus Prime(C)</option>
+				<option value="optimusprimeSt">Optimus Prime(ST)</option>
+				<option value="prowlw1">Prowl</option>
+				<option value="ramjetw1">Ramjet</option>
+				<option value="ransackw1">Ransack</option>
+				<option value="redalertSt">Red Alert</option>
+				<option value="sergeantkupw1">Sergeant Kup</option>
+				<option value="skywarpw1">Skywarp</option>
+				<option value="slipstreamp1">Slipstream</option>
+				<option value="starscreamcomw1">Starscream(C)</option>
+				<option value="starscreamuncw1">Starscream(U)</option>
+				<option value="sunstormw1">Sunstorm</option>
+				<option value="thundercrackerw1">Thundercracker</option>
+				<option value="wheeljackw1">Wheeljack</option>
+			</select>
+			<select id="top4" onchange="getHealth4()" style="visibility:hidden;">
+				<option>--Select Your Transformer--</option>
+				<option value="arceew1">Arcee</option>
+				<option value="cosmosw1">Cosmos</option>
+				<option value="houndw1">Hound</option>
+				<option value="jazzw1">Jazz</option>
+				<option value="miragew1">Mirage</option>
+				<option value="barragew1">Barrage</option>
+				<option value="bombshellw1">Bombshell</option>
+				<option value="bumblebeecomw1">Bumblebee(C)</option>
+				<option value="bumblebeeSt">Bumblebee(ST)</option>
+				<option value="bumblebeesurarw1">Bumblebee(SR)</option>
+				<option value="chopshopw1">Chop Shop</option>
+				<option value="chromiaw1">Chromia</option>
+				<option value="cliffjumperp1">Cliff Jumper</option>
+				<option value="darkmountw1">Darkmount</option>
+				<option value="deadlockw1">Deadlock</option>
+				<option value="shockwavew1">Shockwave</option>
+				<option value="demolisherw1">Demolisher</option>
+				<option value="sludgew1">Sludge</option>
+				<option value="slugw1">Slug</option>
+				<option value="snarlw1">Snarl</option>
+				<option value="swoopw1">Swoop</option>
+				<option value="flamewarw1">Flamewar</option>
+				<option value="grimlockw1">Grimlock</option>
+				<option value="infernow1">Inferno</option>
+				<option value="skrapnelw1">Skrapnel</option>
+				<option value="ironhideSt">Ironhide</option>
+				<option value="jetfirew1">Jetfire</option>
+				<option value="kickbackw1">Kickback</option>
+				<option value="megatroncomw1">Megatron(C)</option>
+				<option value="megatronrarw1">Megatron(R)</option>
+				<option value="nemesisprimew1">Nemesis Prime</option>
+				<option value="optimusprimerarw1">Optimus Prime(R)</option>
+				<option value="optimusprimecomw1">Optimus Prime(C)</option>
+				<option value="optimusprimeSt">Optimus Prime(ST)</option>
+				<option value="prowlw1">Prowl</option>
+				<option value="ramjetw1">Ramjet</option>
+				<option value="ransackw1">Ransack</option>
+				<option value="redalertSt">Red Alert</option>
+				<option value="sergeantkupw1">Sergeant Kup</option>
+				<option value="skywarpw1">Skywarp</option>
+				<option value="slipstreamp1">Slipstream</option>
+				<option value="starscreamcomw1">Starscream(C)</option>
+				<option value="starscreamuncw1">Starscream(U)</option>
+				<option value="sunstormw1">Sunstorm</option>
+				<option value="thundercrackerw1">Thundercracker</option>
+				<option value="wheeljackw1">Wheeljack</option>
+			</select>
+		</div>
+		<div id="purpleact" style="background-color:black;">
+			<ul class="top1">
+				<li><button onclick="subtract1()">DAMAGE</button><button onclick="add1()">HEAL</button></li>
+				<li><button onclick="subtract2()">DAMAGE</button><button onclick="add2()">HEAL</button></li>
+				<li><button onclick="subtract3()">DAMAGE</button><button onclick="add3()">HEAL</button></li>
+				<li><button onclick="subtract4()">DAMAGE</button><button onclick="add4()">HEAL</button></li>
+			</ul>
+		</div>
+<!-- HEALTH NUMBERS -->
+		<div id="healthP">
+			<p class="healthPNum" id="input1"></p><p class="healthPNum" id="input2"</p><p class="healthPNum" id="input3"></p><p class="healthPNum" id="input4"></p>
+		</div>
+		<div id="purplebut" style="background-color:purple;">
+
+<!-- Add Transformer buttons -->	
+			<ul class="top2">
+				<li><button onclick="toggleSelectList1()">Add Transformer</button></li>
+				<li><button onclick="toggleSelectList2()">Add Transformer</button></li>
+				<li><button onclick="toggleSelectList3()">Add Transformer</button></li>
+				<li><button onclick="toggleSelectList4()">Add Transformer</button></li>
+			</ul>
+		</div>	
+		<div id="bgchgwrapper">	
+			<strong><p><button class="bgbut" onclick="changeDivColor()">▒</button> Change Background Color</p></strong>
+		</div>
+			<script>
+<!-- This code is called onclick above. It executes the select box pop-in, and background color change -->
+		function toggleSelectList1() {
+	let tog1 = document.getElementById('top1')
+	if (tog1.style.visibility === "hidden") {
+        (tog1.style.visibility = "visible");
+    } else if (tog1.style.visibility === "visible") {
+        tog1.style.visibility = "hidden";
+	} else {
+	console.log(false);
+    }
+}
+		function toggleSelectList2() {
+    	let tog2 = document.getElementById('top2')
+	if (tog2.style.visibility === "hidden") {
+        (tog2.style.visibility = "visible");
+    } else if (tog2.style.visibility === "visible") {
+        tog2.style.visibility = "hidden";
+	} else {
+	console.log(false);
+    }
+}
+		function toggleSelectList3() {
+    	let tog3 = document.getElementById('top3')
+	if (tog3.style.visibility === "hidden") {
+        (tog3.style.visibility = "visible");
+    } else if (tog3.style.visibility === "visible") {
+        tog3.style.visibility = "hidden";
+	} else {
+	console.log(false);
+    }
+}
+		function toggleSelectList4() {
+    	let tog4 = document.getElementById('top4')
+	if (tog4.style.visibility === "hidden") {
+        (tog4.style.visibility = "visible");
+    } else if (tog4.style.visibility === "visible") {
+        tog4.style.visibility = "hidden";
+	} else {
+	console.log(false);
+    }
+}
+		function changeDivColor() {
+		var togDiv = document.getElementById('purplebut');
+		if (togDiv.style["backgroundColor"] === "purple") {
+		(togDiv.style["backgroundColor"] = "red");
+		}
+		else if (togDiv.style["backgroundColor"] === "red") {
+		(togDiv.style["backgroundColor"] = "purple");
+		}
+	}
+<!-- WRENCH VALUE GRAB FROM OBJECT AND OPTION SELECT -->	
+	
+	function getHealth1() {
+let selectedTransformer = document.getElementById("top1").value;
+
+document.getElementById("input1").innerHTML = mappedTransformers[selectedTransformer].wrench;
+console.log(mappedTransformers[selectedTransformer].wrench);
+}
+	function getHealth2() {
+let selectedTransformer = document.getElementById("top2").value;
+
+
+document.getElementById("input2").innerHTML = mappedTransformers[selectedTransformer].wrench;
+console.log(mappedTransformers[selectedTransformer].wrench);
+}
+	function getHealth3() {
+let selectedTransformer = document.getElementById("top3").value;
+
+document.getElementById("input3").innerHTML = mappedTransformers[selectedTransformer].wrench;
+console.log(mappedTransformers[selectedTransformer].wrench);
+}
+
+	function getHealth4() {
+let selectedTransformer = document.getElementById("top4").value;
+
+document.getElementById("input4").innerHTML = mappedTransformers[selectedTransformer].wrench;
+console.log(mappedTransformers[selectedTransformer].wrench);
+}		
+<!-- Code below is functionality for Damage/Heal buttons -->
+	function add1()
+{
+  let selectedTransformer = document.getElementById("top1").value;
+  let txtNumber = document.getElementById("input1").innerHTML;
+  let newNumber = parseInt(txtNumber) + 1;
+  
+  if (newNumber <= mappedTransformers[selectedTransformer].wrench) {
+  
+  document.getElementById("input1").innerHTML = parseInt(txtNumber) + 1;
+		}
+	else {
+	console.log(false);
+	}
+}
+function subtract1()
+{
+  let selectedTransformer = document.getElementById("top1").value;
+  let txtNumber = document.getElementById("input1").innerHTML;
+  let newNumber = parseInt(txtNumber) - 1;
+  
+  if ((newNumber != mappedTransformers[selectedTransformer].wrench) && (newNumber >= 0)) {
+  
+  document.getElementById("input1").innerHTML = parseInt(txtNumber) - 1;
+  return false;
+	}
+}
+	function add2() {
+  let selectedTransformer = document.getElementById("top2").value;
+  let txtNumber = document.getElementById("input2").innerHTML;
+  let newNumber = parseInt(txtNumber) + 1;
+  
+  if (newNumber <= mappedTransformers[selectedTransformer].wrench) {
+  
+  document.getElementById("input2").innerHTML = parseInt(txtNumber) + 1;
+		}
+	else {
+	console.log(false);
+	}
+}
+function subtract2() {
+  let selectedTransformer = document.getElementById("top2").value;
+  let txtNumber = document.getElementById("input2").innerHTML;
+  let newNumber = parseInt(txtNumber) - 1;
+  
+  if ((newNumber != mappedTransformers[selectedTransformer].wrench) && (newNumber >= 0)) {
+  
+  document.getElementById("input2").innerHTML = parseInt(txtNumber) - 1;
+  return false;
+	}
+}
+	function add3()
+{
+  let selectedTransformer = document.getElementById("top3").value;
+  let txtNumber = document.getElementById("input3").innerHTML;
+  let newNumber = parseInt(txtNumber) + 1;
+  
+  if (newNumber <= mappedTransformers[selectedTransformer].wrench) {
+  
+  document.getElementById("input3").innerHTML = parseInt(txtNumber) + 1;
+		}
+	else {
+	console.log(false);
+	}
+}
+function subtract3() {
+  let selectedTransformer = document.getElementById("top3").value;
+  let txtNumber = document.getElementById("input3").innerHTML;
+  let newNumber = parseInt(txtNumber) - 1;
+  
+  if ((newNumber != mappedTransformers[selectedTransformer].wrench) && (newNumber >= 0)) {
+  
+  document.getElementById("input3").innerHTML = parseInt(txtNumber) - 1;
+  return false;
+	}
+}
+	function add4() {
+  let selectedTransformer = document.getElementById("top4").value;
+  let txtNumber = document.getElementById("input4").innerHTML;
+  let newNumber = parseInt(txtNumber) + 1;
+  
+  if (newNumber <= mappedTransformers[selectedTransformer].wrench) {
+  
+  document.getElementById("input4").innerHTML = parseInt(txtNumber) + 1;
+		}
+	else {
+	console.log(false);
+	}
+}
+function subtract4() {
+  let selectedTransformer = document.getElementById("top4").value;
+  let txtNumber = document.getElementById("input4").innerHTML;
+  let newNumber = parseInt(txtNumber) - 1;
+  
+  if ((newNumber != mappedTransformers[selectedTransformer].wrench) && (newNumber >= 0)) {
+  
+  document.getElementById("input4").innerHTML = parseInt(txtNumber) - 1;
+  return false;
+	}
+}
+/* Change BG color of healthNum based on decepticon/autobot allegiance property value 
+function changeBG1() {
+	let selectedTransformer = document.getElementById("top1").value;
+	let numBGToColor = document.getElementById(input1);
+		if (mappedTransformers[selectedTransformer].allegiance === "Autobot") {
+		numBGToColor.style.background-color = "red";
+		}
+		else {
+		numBGToColor.style.background-color = "purple";
+		}
+}*/
+		</script>
+	</body>
+</html>
