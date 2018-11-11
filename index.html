@@ -2,7 +2,7 @@
 <html>
 	<head>
 	<script type="text/javascript" src="./js/transformers.js"></script>
-	<link href="./css/transformers.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/transformers.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
 		<title>
@@ -10,56 +10,12 @@
 		</title>
 <!-- Styling - some inline style exists -->
 	<style>
-#healthP {
-	display: flex;
-    justify-content: space-between;
-	background-color: yellow;
-}
-#purplebut {
-	
-}
-#purpleact {
-}
-#purpleselect {
-	display: flex;
-	justify-content: space-around;
-}
-#bgchangewrapper {
-}
-.healthPNum {
-	margin: 0px;
-}
-.top1 {
-	display: flex;
-	justify-content: space-between;
-	list-style: none;
-	margin: 0px;
-}
-.top2 {
-	display: flex;
-	justify-content: space-between;
-	list-style: none;
-	margin: 0px;
-}
-input {
-	margin: 0px;
-}
-li {
-	width: max-content;
-	margin: 0;
-}
-button {
-	border-radius: 0px;
-}
-select {
-}
-option {
-}
+
 	</style>
 	</head>
 	<body>
 		<div id="purpleselect">
-			<select id="top1" onchange="getHealth1(), changeBG1()" style="visibility:hidden;">
+			<select id="top1" class="sel" onchange="getHealth1(), changeBG1()" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -108,7 +64,7 @@ option {
 				<option value="thundercrackerw1">Thundercracker</option>
 				<option value="wheeljackw1">Wheeljack</option>
 			</select>
-			<select id="top2" onchange="getHealth2()" style="visibility:hidden;">
+			<select id="top2" class="sel" onchange="getHealth2()" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -157,7 +113,7 @@ option {
 				<option value="thundercrackerw1">Thundercracker</option>
 				<option value="wheeljackw1">Wheeljack</option>
 			</select>
-			<select id="top3" onchange="getHealth3()" style="visibility:hidden;">
+			<select id="top3" class="sel" onchange="getHealth3()" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -206,7 +162,7 @@ option {
 				<option value="thundercrackerw1">Thundercracker</option>
 				<option value="wheeljackw1">Wheeljack</option>
 			</select>
-			<select id="top4" onchange="getHealth4()" style="visibility:hidden;">
+			<select id="top4" class="sel" onchange="getHealth4()" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -258,10 +214,10 @@ option {
 		</div>
 		<div id="purpleact" style="background-color:black;">
 			<ul class="top1">
-				<li><button onclick="subtract1()">DAMAGE</button><button onclick="add1()">HEAL</button></li>
-				<li><button onclick="subtract2()">DAMAGE</button><button onclick="add2()">HEAL</button></li>
-				<li><button onclick="subtract3()">DAMAGE</button><button onclick="add3()">HEAL</button></li>
-				<li><button onclick="subtract4()">DAMAGE</button><button onclick="add4()">HEAL</button></li>
+				<li><button onclick="subtract1()"><span class="dmg" style="font-family:'Wingdings 2'">&#x00f0;</span></button><button onclick="add1()"><span class="heal" style="font-family:'Wingdings 2'">&#x00cc;</span></button></li>
+				<li><button onclick="subtract2()"><span class="dmg" style="font-family:'Wingdings 2'">&#x00f0;</span></button><button onclick="add2()"><span class="heal" style="font-family:'Wingdings 2'">&#x00cc;</span></button></li>
+				<li><button onclick="subtract3()"><span class="dmg" style="font-family:'Wingdings 2'">&#x00f0;</span></button><button onclick="add3()"><span class="heal" style="font-family:'Wingdings 2'">&#x00cc;</span></button></li>
+				<li><button onclick="subtract4()"><span class="dmg" style="font-family:'Wingdings 2'">&#x00f0;</span></button><button onclick="add4()"><span class="heal" style="font-family:'Wingdings 2'">&#x00cc;</span></button></li>
 			</ul>
 		</div>
 <!-- HEALTH NUMBERS -->
@@ -271,11 +227,11 @@ option {
 		<div id="purplebut" style="background-color:purple;">
 
 <!-- Add Transformer buttons -->	
-			<ul class="top2">
-				<li><button onclick="toggleSelectList1()">Add Transformer</button></li>
-				<li><button onclick="toggleSelectList2()">Add Transformer</button></li>
-				<li><button onclick="toggleSelectList3()">Add Transformer</button></li>
-				<li><button onclick="toggleSelectList4()">Add Transformer</button></li>
+			<ul class="top2" style="list-style: none;">
+				<li><button onclick="toggleSelectList1()">Select</button></li>
+				<li><button onclick="toggleSelectList2()">Select</button></li>
+				<li><button onclick="toggleSelectList3()">Select</button></li>
+				<li><button onclick="toggleSelectList4()">Select</button></li>
 			</ul>
 		</div>	
 		<div id="bgchgwrapper">	
