@@ -95,7 +95,7 @@ const mappedTransformers = {
 		jetfirew1: jetfirew1,
 		kickbackw1: kickbackw1,
 		megatroncomw1: megatroncomw1,
-		megatronrarew1: megatronrarew1,
+		megatronrarw1: megatronrarw1,
 		nemesisprimew1: nemesisprimew1,
 		optimusprimerarw1: optimusprimerarw1,
 		optimusprimecomw1: optimusprimecomw1,
