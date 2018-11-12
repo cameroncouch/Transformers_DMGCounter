@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
 	<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<script type="text/javascript" src="./js/transformers.js"></script>
@@ -17,7 +18,7 @@
 	</head>
 	<body>
 		<div id="purpleselect">
-			<select id="top1" class="sel" onchange="getHealth1(), changeBG1()" style="visibility:hidden;">
+			<select id="top1" class="sel1" onchange="getHealth1()" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -66,7 +67,7 @@
 				<option value="thundercrackerw1">Thundercracker</option>
 				<option value="wheeljackw1">Wheeljack</option>
 			</select>
-			<select id="top2" class="sel" onchange="getHealth2()" style="visibility:hidden;">
+			<select id="top2" class="sel2" onchange="getHealth2()" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -115,7 +116,7 @@
 				<option value="thundercrackerw1">Thundercracker</option>
 				<option value="wheeljackw1">Wheeljack</option>
 			</select>
-			<select id="top3" class="sel" onchange="getHealth3()" style="visibility:hidden;">
+			<select id="top3" class="sel3" onchange="getHealth3()" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -164,7 +165,7 @@
 				<option value="thundercrackerw1">Thundercracker</option>
 				<option value="wheeljackw1">Wheeljack</option>
 			</select>
-			<select id="top4" class="sel" onchange="getHealth4()" style="visibility:hidden;">
+			<select id="top4" class="sel4" onchange="getHealth4()" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -237,12 +238,13 @@
 			</ul>
 		</div>	
 		<div id="bgchgwrapper">	
-			<strong><p><button class="bgbut" onclick="changeDivColor()"><i class="fas fa-paint-brush"></i></button> Change Background Color</p></strong>
+			<button class="bgbut" onclick="changeDivColor()"><i class="fas fa-paint-brush"></i></button>
 		</div>
 			<script>
 <!-- This code is called onclick above. It executes the select box pop-in, and background color change -->
 		function toggleSelectList1() {
 	let tog1 = document.getElementById('top1')
+	let togH1 = document.getElementById("input1").innerHTML
 	if (tog1.style.visibility === "hidden") {
         (tog1.style.visibility = "visible");
     } else if (tog1.style.visibility === "visible") {
@@ -318,6 +320,10 @@ let selectedTransformer = document.getElementById("top4").value;
 document.getElementById("input4").innerHTML = mappedTransformers[selectedTransformer].wrench;
 console.log(mappedTransformers[selectedTransformer].wrench);
 }		
+<!-- Code below is functionality for hiding health on de-selecting of transformer -->
+function hideHealth1() {
+
+}
 <!-- Code below is functionality for Damage/Heal buttons -->
 	function add1()
 {
