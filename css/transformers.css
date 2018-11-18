@@ -1,7 +1,9 @@
 @media (max-width: 768px) {
 /* For mobile */
+#input4 {
+	padding-top: 10px;
+}
 #healthP {
-	display: grid;
 	background-color: black;
 	color: white;
 	padding: 5px;
@@ -9,6 +11,7 @@
 }
 
 #purplebut {
+	display: grid;
 	
 }
 #purpleact {
@@ -27,6 +30,7 @@
 }
 .healthPNum {
 	margin: 0px;
+	padding-top: 5px;
 }
 .top1 {
 	display: grid;
@@ -37,6 +41,9 @@
 	display: grid;
 	list-style: none;
 	margin: 0px;
+}
+html {
+
 }
 body {
 	display: flex;
