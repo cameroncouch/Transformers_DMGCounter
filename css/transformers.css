@@ -4,7 +4,6 @@
 	padding-top: 10px;
 }
 #healthP {
-	background-color: black;
 	color: white;
 	padding: 5px;
 	font-weight: bold;
@@ -45,6 +44,7 @@
 
 body {
 	display: flex;
+	background-color: indigo;
 }
 i	 {
 	font-size: 20px;
@@ -65,13 +65,18 @@ p {
 	font-size: 40px;
 }
 button {
-	border-radius: 0px;
+	font-family: 'Oxygen', sans-serif;
+	font-weight: bold;
+	border-radius: 2px;
 	border: none;
 	margin: 5px;
 	padding: 15px;
-	background-color: white;
+	text-transform: uppercase;
+	box-shadow: 0px 4px 8px 0px rgba(0,0,0,1);
+	background-color: darkviolet;
 }
 select {
+	box-shadow: 0px 4px 8px 0px rgba(0,0,0,1);
 }
 option {
 }
@@ -133,6 +138,8 @@ li {
 	margin: 0;
 }
 button {
+	font-family: 'Oxygen', sans-serif;
+	font-weight: bold;
 	border-radius: 0px;
 	border: none;
 	background-color: white;

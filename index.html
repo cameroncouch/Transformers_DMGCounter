@@ -14,10 +14,29 @@
 		</title>
 <!-- Styling - some inline style exists -->
 	<style>
+		button {
+			font-family: 'Oxygen', sans-serif;
+			font-weight: bold;
+			border-radius: 2px;
+			border: none;
+			margin: 5px;
+			padding: 15px;
+			background-color: darkviolet;
+}
+		.but {
+			button {
+			font-family: 'Oxygen', sans-serif;
+			font-weight: bold;
+			border-radius: 2px;
+			border: none;
+			margin: 5px;
+			padding: 15px;
+			background-color: darkviolet;
+}
 
 	</style>
 	</head>
-	<body>
+	<body id="bodyCol" style="background-color:indigo">
 		<div id="purpleselect">
 			<select id="top1" class="sel1" onchange="getHealth1()" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
@@ -232,19 +251,19 @@
 				<option value="wheeljackw1">Wheeljack</option>
 			</select>
 		</div>
-		<div id="purpleact" style="background-color:black;">
+		<div id="purpleact">
 			<ul class="top1">
-				<li><button onclick="subtract1()"><span class="dmg"><i class="fas fa-haykal"></i></span></button><button onclick="add1()"><span class="heal"><i class="fas fa-first-aid"></i></span></button></li>
-				<li><button onclick="subtract2()"><span class="dmg"><i class="fas fa-haykal"></i></span></button><button onclick="add2()"><span class="heal"><i class="fas fa-first-aid"></i></span></button></li>
-				<li><button onclick="subtract3()"><span class="dmg"><i class="fas fa-haykal"></i></span></button><button onclick="add3()"><span class="heal"><i class="fas fa-first-aid"></i></span></button></li>
-				<li><button onclick="subtract4()"><span class="dmg"><i class="fas fa-haykal"></i></span></button><button onclick="add4()"><span class="heal"><i class="fas fa-first-aid"></i></span></button></li>
+				<li><button class="but" onclick="subtract1()"><span class="dmg"><i class="fas fa-haykal"></i></span></button><button class="but" onclick="add1()"><span class="heal"><i class="fas fa-first-aid"></i></span></button></li>
+				<li><button class="but" onclick="subtract2()"><span class="dmg"><i class="fas fa-haykal"></i></span></button><button class="but" onclick="add2()"><span class="heal"><i class="fas fa-first-aid"></i></span></button></li>
+				<li><button class="but" onclick="subtract3()"><span class="dmg"><i class="fas fa-haykal"></i></span></button><button class="but" onclick="add3()"><span class="heal"><i class="fas fa-first-aid"></i></span></button></li>
+				<li><button class="but" onclick="subtract4()"><span class="dmg"><i class="fas fa-haykal"></i></span></button><button class="but" onclick="add4()"><span class="heal"><i class="fas fa-first-aid"></i></span></button></li>
 			</ul>
 		</div>
 <!-- HEALTH NUMBERS -->
 		<div id="healthP">
 			<p class="healthPNum" id="input1"></p><p class="healthPNum" id="input2"</p><p class="healthPNum" id="input3"></p><p class="healthPNum" id="input4"></p>
 		</div>
-		<div id="purplebut" style="background-color:purple;">
+		<div id="purplebut">
 
 <!-- Add Transformer buttons -->	
 			<ul class="top2" style="list-style: none;">
@@ -253,15 +272,17 @@
 				<li><button onclick="toggleSelectList3()">Select</button></li>
 				<li><button onclick="toggleSelectList4()">Select</button></li>
 			</ul>
-		</div>	
-		<div id="bgchgwrapper">	
-			<button class="bgbut" onclick="changeDivColor()"><i class="fas fa-paint-brush"></i></button>
 		</div>
-			<script>
+
+		<div id="bgchgwrapper">	
+			<button class="but" onclick="changeBGColor()"><i class="fas fa-paint-brush"></i></button>
+		</div>
+		
+		<script>
 <!-- This code is called onclick above. It executes the select box pop-in, and background color change -->
 		function toggleSelectList1() {
-	let tog1 = document.getElementById('top1')
-	let togH1 = document.getElementById("input1").innerHTML
+	let tog1 = document.getElementById('top1');
+	let togH1 = document.getElementById("input1").innerHTML;
 	if (tog1.style.visibility === "hidden") {
         (tog1.style.visibility = "visible");
     } else if (tog1.style.visibility === "visible") {
@@ -271,7 +292,7 @@
     }
 }
 		function toggleSelectList2() {
-    	let tog2 = document.getElementById('top2')
+    	let tog2 = document.getElementById('top2');
 	if (tog2.style.visibility === "hidden") {
         (tog2.style.visibility = "visible");
     } else if (tog2.style.visibility === "visible") {
@@ -281,7 +302,7 @@
     }
 }
 		function toggleSelectList3() {
-    	let tog3 = document.getElementById('top3')
+    	let tog3 = document.getElementById('top3');
 	if (tog3.style.visibility === "hidden") {
         (tog3.style.visibility = "visible");
     } else if (tog3.style.visibility === "visible") {
@@ -291,7 +312,7 @@
     }
 }
 		function toggleSelectList4() {
-    	let tog4 = document.getElementById('top4')
+    	let tog4 = document.getElementById('top4');
 	if (tog4.style.visibility === "hidden") {
         (tog4.style.visibility = "visible");
     } else if (tog4.style.visibility === "visible") {
@@ -300,15 +321,26 @@
 	console.log(false);
     }
 }
-		function changeDivColor() {
-		var togDiv = document.getElementById('purplebut');
-		if (togDiv.style["backgroundColor"] === "purple") {
-		(togDiv.style["backgroundColor"] = "red");
+
+/*		function changeButtonColor() {
+		let togBut = document.getElementsByClassName('but');
+		if (document.getElementsByClassName('but').style["backgroundColor"] === "darkviolet") {
+		(document.getElementsByClassName('but').style["backgroundColor"] = "white");
 		}
-		else if (togDiv.style["backgroundColor"] === "red") {
-		(togDiv.style["backgroundColor"] = "purple");
+		else if (document.getElementsByClassName('but').style["backgroundColor"] === "white") {
+		(document.getElementsByClassName('but').style["backgroundColor"] = "darkviolet");
 		}
-	}
+}*/
+		function changeBGColor() {
+		let togBG = document.getElementById('bodyCol');
+		if (togBG.style["backgroundColor"] === "indigo") {
+		(togBG.style["backgroundColor"] = "red");
+		}
+		else if (togBG.style["backgroundColor"] === "red") {
+		(togBG.style["backgroundColor"] = "indigo");
+		}
+}
+ 
 <!-- WRENCH VALUE GRAB FROM OBJECT AND OPTION SELECT -->	
 	
 	function getHealth1() {
