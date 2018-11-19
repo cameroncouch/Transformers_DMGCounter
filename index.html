@@ -23,20 +23,10 @@
 			padding: 15px;
 			background-color: darkviolet;
 }
-		.but {
-			button {
-			font-family: 'Oxygen', sans-serif;
-			font-weight: bold;
-			border-radius: 2px;
-			border: none;
-			margin: 5px;
-			padding: 15px;
-			background-color: darkviolet;
-}
 
 	</style>
 	</head>
-	<body id="bodyCol" style="background-color:indigo">
+	<body id="background" style="background-color:indigo">
 		<div id="purpleselect">
 			<select id="top1" class="sel1" onchange="getHealth1()" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
@@ -251,6 +241,15 @@
 				<option value="wheeljackw1">Wheeljack</option>
 			</select>
 		</div>
+		<div id="purplebut">
+<!-- Add Transformer buttons -->	
+			<ul class="top2" style="list-style: none;">
+				<li><button onclick="toggleSelectList1()">Select</button></li>
+				<li><button onclick="toggleSelectList2()">Select</button></li>
+				<li><button onclick="toggleSelectList3()">Select</button></li>
+				<li><button onclick="toggleSelectList4()">Select</button></li>
+			</ul>
+		</div>
 		<div id="purpleact">
 			<ul class="top1">
 				<li><button class="but" onclick="subtract1()"><span class="dmg"><i class="fas fa-haykal"></i></span></button><button class="but" onclick="add1()"><span class="heal"><i class="fas fa-first-aid"></i></span></button></li>
@@ -263,21 +262,9 @@
 		<div id="healthP">
 			<p class="healthPNum" id="input1"></p><p class="healthPNum" id="input2"</p><p class="healthPNum" id="input3"></p><p class="healthPNum" id="input4"></p>
 		</div>
-		<div id="purplebut">
-
-<!-- Add Transformer buttons -->	
-			<ul class="top2" style="list-style: none;">
-				<li><button onclick="toggleSelectList1()">Select</button></li>
-				<li><button onclick="toggleSelectList2()">Select</button></li>
-				<li><button onclick="toggleSelectList3()">Select</button></li>
-				<li><button onclick="toggleSelectList4()">Select</button></li>
-			</ul>
-		</div>
-
 		<div id="bgchgwrapper">	
 			<button class="but" onclick="changeBGColor()"><i class="fas fa-paint-brush"></i></button>
 		</div>
-		
 		<script>
 <!-- This code is called onclick above. It executes the select box pop-in, and background color change -->
 		function toggleSelectList1() {
@@ -332,7 +319,7 @@
 		}
 }*/
 		function changeBGColor() {
-		let togBG = document.getElementById('bodyCol');
+		let togBG = document.getElementById('background');
 		if (togBG.style["backgroundColor"] === "indigo") {
 		(togBG.style["backgroundColor"] = "red");
 		}
