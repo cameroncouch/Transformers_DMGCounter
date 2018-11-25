@@ -103,6 +103,9 @@ option {
 }
 #bgchangewrapper {
 }
+.but {
+	background-color: darkviolet;
+}
 .heal{
 	color: lawngreen;
 }

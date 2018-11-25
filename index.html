@@ -14,7 +14,7 @@
 		</title>
 <!-- Styling - some inline style exists -->
 	<style>
-		button {
+		.but {
 			font-family: 'Oxygen', sans-serif;
 			font-weight: bold;
 			border-radius: 2px;
@@ -27,17 +27,18 @@
 	</style>
 	</head>
 	<body id="background" style="background-color:indigo">
+	<audio id="audio" src="transforming.mp3"></audio>
 		<div id="purplebut">
 <!-- Add Transformer buttons -->	
 			<ul class="top2" style="list-style: none;">
-				<li><button onclick="toggleSelectList1()">Select</button></li>
-				<li><button onclick="toggleSelectList2()">Select</button></li>
-				<li><button onclick="toggleSelectList3()">Select</button></li>
-				<li><button onclick="toggleSelectList4()">Select</button></li>
+				<li><button class="but" onclick="toggleSelectList1()">Select</button></li>
+				<li><button class="but" onclick="toggleSelectList2()">Select</button></li>
+				<li><button class="but" onclick="toggleSelectList3()">Select</button></li>
+				<li><button class="but" onclick="toggleSelectList4()">Select</button></li>
 			</ul>
 		</div>
 		<div id="purpleselect">
-			<select id="top1" class="sel1" onchange="getHealth1()" style="visibility:hidden;">
+			<select id="top1" class="sel1" onchange="getHealth1(); play();" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -90,7 +91,7 @@
 				<option value="thundercrackerw1">Thundercracker</option>
 				<option value="wheeljackw1">Wheeljack</option>
 			</select>
-			<select id="top2" class="sel2" onchange="getHealth2()" style="visibility:hidden;">
+			<select id="top2" class="sel2" onchange="getHealth2(); play();" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -143,7 +144,7 @@
 				<option value="thundercrackerw1">Thundercracker</option>
 				<option value="wheeljackw1">Wheeljack</option>
 			</select>
-			<select id="top3" class="sel3" onchange="getHealth3()" style="visibility:hidden;">
+			<select id="top3" class="sel3" onchange="getHealth3(); play();" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -196,7 +197,7 @@
 				<option value="thundercrackerw1">Thundercracker</option>
 				<option value="wheeljackw1">Wheeljack</option>
 			</select>
-			<select id="top4" class="sel4" onchange="getHealth4()" style="visibility:hidden;">
+			<select id="top4" class="sel4" onchange="getHealth4(); play();" style="visibility:hidden;">
 				<option>--Select Your Transformer--</option>
 				<option value="arceew1">Arcee</option>
 				<option value="cosmosw1">Cosmos</option>
@@ -263,7 +264,7 @@
 			<p class="healthPNum" id="input1"></p><p class="healthPNum" id="input2"</p><p class="healthPNum" id="input3"></p><p class="healthPNum" id="input4"></p>
 		</div>
 		<div id="bgchgwrapper">	
-			<button class="but" onclick="changeBGColor()"><i class="fas fa-paint-brush"></i></button>
+			<button class="but" onclick="changeBGColor(); changeButtonColor();"><i class="fas fa-paint-brush"></i></button>
 		</div>
 		<script>
 <!-- This code is called onclick above. It executes the select box pop-in, and background color change -->
@@ -309,15 +310,6 @@
     }
 }
 
-/*		function changeButtonColor() {
-		let togBut = document.getElementsByClassName('but');
-		if (document.getElementsByClassName('but').style["backgroundColor"] === "darkviolet") {
-		(document.getElementsByClassName('but').style["backgroundColor"] = "white");
-		}
-		else if (document.getElementsByClassName('but').style["backgroundColor"] === "white") {
-		(document.getElementsByClassName('but').style["backgroundColor"] = "darkviolet");
-		}
-}*/
 		function changeBGColor() {
 		let togBG = document.getElementById('background');
 		if (togBG.style["backgroundColor"] === "indigo") {
@@ -327,7 +319,25 @@
 		(togBG.style["backgroundColor"] = "indigo");
 		}
 }
- 
+		function changeButtonColor() {
+		let togBut = document.getElementsByClassName('but');
+		for (i = 0; i < togBut.length; i++) {
+		let butCol = togBut[i].style["backgroundColor"];
+		if (butCol === "") {
+		(togBut[i].style["backgroundColor"] = "white");
+		}
+		else if (togBut[i].style["backgroundColor"] === "white") {
+		(togBut[i].style["backgroundColor"] = "darkviolet");
+		}
+		else if (togBut[i].style["backgroundColor"] === "darkviolet") {
+		(togBut[i].style["backgroundColor"] = "white");
+		}
+	}
+}
+function play() {
+	var audio = document.getElementById('audio');
+	audio.play();
+	}
 <!-- WRENCH VALUE GRAB FROM OBJECT AND OPTION SELECT -->	
 	
 	function getHealth1() {
