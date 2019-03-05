@@ -145,6 +145,179 @@ function changeButtonColor() {
 		}
 	}
 }
+function toggleSelectList1() {
+	let tog1 = document.getElementById('top1');
+	if (tog1.style.visibility === "hidden") {
+		(tog1.style.visibility = "visible");
+	} else if (tog1.style.visibility === "visible") {
+		tog1.style.visibility = "hidden";
+	} else {
+		console.log(false);
+	}
+}
+function toggleSelectList2() {
+let tog2 = document.getElementById('top2');
+if (tog2.style.visibility === "hidden") {
+	(tog2.style.visibility = "visible");
+} else if (tog2.style.visibility === "visible") {
+	tog2.style.visibility = "hidden";
+} else {
+	console.log(false);
+}
+}
+function toggleSelectList3() {
+let tog3 = document.getElementById('top3');
+if (tog3.style.visibility === "hidden") {
+	(tog3.style.visibility = "visible");
+} else if (tog3.style.visibility === "visible") {
+	tog3.style.visibility = "hidden";
+} else {
+	console.log(false);
+}
+}
+function toggleSelectList4() {
+let tog4 = document.getElementById('top4');
+if (tog4.style.visibility === "hidden") {
+	(tog4.style.visibility = "visible");
+} else if (tog4.style.visibility === "visible") {
+	tog4.style.visibility = "hidden";
+} else {
+	console.log(false);
+}
+}
+function play() {
+var audio = document.getElementById('audio');
+audio.play();
+}
+//WRENCH VALUE GRAB FROM OBJECT AND OPTION SELECT
+
+function getHealth1() {
+	let selectedTransformer = document.getElementById("top1").value;
+
+	document.getElementById("input1").innerHTML = mappedTransformers[selectedTransformer].wrench;
+	console.log(mappedTransformers[selectedTransformer].wrench);
+}
+function getHealth2() {
+let selectedTransformer = document.getElementById("top2").value;
+
+
+document.getElementById("input2").innerHTML = mappedTransformers[selectedTransformer].wrench;
+console.log(mappedTransformers[selectedTransformer].wrench);
+}
+function getHealth3() {
+let selectedTransformer = document.getElementById("top3").value;
+
+document.getElementById("input3").innerHTML = mappedTransformers[selectedTransformer].wrench;
+console.log(mappedTransformers[selectedTransformer].wrench);
+}
+
+function getHealth4() {
+let selectedTransformer = document.getElementById("top4").value;
+
+document.getElementById("input4").innerHTML = mappedTransformers[selectedTransformer].wrench;
+console.log(mappedTransformers[selectedTransformer].wrench);
+}		
+//Code below is functionality for hiding health on de - selecting of transformer-- >
+function hideHealth1() {
+
+}
+//Code below is functionality for Damage / Heal buttons-- >
+	function add1() {
+		let selectedTransformer = document.getElementById("top1").value;
+		let txtNumber = document.getElementById("input1").innerHTML;
+		let newNumber = parseInt(txtNumber) + 1;
+
+		if (newNumber <= mappedTransformers[selectedTransformer].wrench) {
+
+			document.getElementById("input1").innerHTML = parseInt(txtNumber) + 1;
+		}
+		else {
+			console.log(false);
+		}
+	}
+function subtract1() {
+	let selectedTransformer = document.getElementById("top1").value;
+	let txtNumber = document.getElementById("input1").innerHTML;
+	let newNumber = parseInt(txtNumber) - 1;
+
+	if ((newNumber != mappedTransformers[selectedTransformer].wrench) && (newNumber >= 0)) {
+
+		document.getElementById("input1").innerHTML = parseInt(txtNumber) - 1;
+		return false;
+	}
+}
+function add2() {
+	let selectedTransformer = document.getElementById("top2").value;
+	let txtNumber = document.getElementById("input2").innerHTML;
+	let newNumber = parseInt(txtNumber) + 1;
+
+	if (newNumber <= mappedTransformers[selectedTransformer].wrench) {
+
+		document.getElementById("input2").innerHTML = parseInt(txtNumber) + 1;
+	}
+	else {
+		console.log(false);
+	}
+}
+function subtract2() {
+let selectedTransformer = document.getElementById("top2").value;
+let txtNumber = document.getElementById("input2").innerHTML;
+let newNumber = parseInt(txtNumber) - 1;
+
+if ((newNumber != mappedTransformers[selectedTransformer].wrench) && (newNumber >= 0)) {
+
+	document.getElementById("input2").innerHTML = parseInt(txtNumber) - 1;
+	return false;
+}
+}
+function add3() {
+let selectedTransformer = document.getElementById("top3").value;
+let txtNumber = document.getElementById("input3").innerHTML;
+let newNumber = parseInt(txtNumber) + 1;
+
+if (newNumber <= mappedTransformers[selectedTransformer].wrench) {
+
+	document.getElementById("input3").innerHTML = parseInt(txtNumber) + 1;
+}
+else {
+	console.log(false);
+}
+}
+function subtract3() {
+let selectedTransformer = document.getElementById("top3").value;
+let txtNumber = document.getElementById("input3").innerHTML;
+let newNumber = parseInt(txtNumber) - 1;
+
+if ((newNumber != mappedTransformers[selectedTransformer].wrench) && (newNumber >= 0)) {
+
+	document.getElementById("input3").innerHTML = parseInt(txtNumber) - 1;
+	return false;
+}
+}
+function add4() {
+let selectedTransformer = document.getElementById("top4").value;
+let txtNumber = document.getElementById("input4").innerHTML;
+let newNumber = parseInt(txtNumber) + 1;
+
+if (newNumber <= mappedTransformers[selectedTransformer].wrench) {
+
+	document.getElementById("input4").innerHTML = parseInt(txtNumber) + 1;
+}
+else {
+	console.log(false);
+}
+}
+function subtract4() {
+let selectedTransformer = document.getElementById("top4").value;
+let txtNumber = document.getElementById("input4").innerHTML;
+let newNumber = parseInt(txtNumber) - 1;
+
+if ((newNumber != mappedTransformers[selectedTransformer].wrench) && (newNumber >= 0)) {
+
+	document.getElementById("input4").innerHTML = parseInt(txtNumber) - 1;
+	return false;
+}
+}
 //This is dedicated to my loving wife
 /* DONE 1. Make const for all characters
 /* DONE 2. Create option for all characters
