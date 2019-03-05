@@ -11,15 +11,9 @@
 
 #purplebut {
 	display: grid;
-	
-}
-#purpleact {
-
 }
 #purpleselect {
 	display: grid;
-}
-#bgchangewrapper {
 }
 .heal  {
 	color: lawngreen;
@@ -37,7 +31,6 @@
 	margin: 0px;
 }
 .top2 {
-	display: grid;
 	list-style: none;
 	margin: 0px;
 	padding-top: 2px;
@@ -78,9 +71,33 @@ button {
 select {
 	box-shadow: 0px 4px 8px 0px rgba(0,0,0,1);
 }
-option {
+
 }
+@media only screen 
+  and (min-width: 375px) 
+  and (max-width: 768px) 
+  and (orientation: portrait) { 
+	body {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+	}
+	.top2 {
+		margin: 0px;
+		width: 97%;
+		text-align: -webkit-center;
+	}
+	.but {
+		width: 100%;
+	}
+	li {
+		width: 100%;
+	}
+	button {
+		width: 100%;
+	}
 }
+
 @media (min-width: 769px) {
 /* For desktop */
 #healthP {
@@ -94,15 +111,12 @@ option {
 #purplebut {
 	list-style: none;
 }
-#purpleact {
 
-}
 #purpleselect {
 	display: flex;
 	justify-content: space-between;
 }
-#bgchangewrapper {
-}
+
 .but {
 	background-color: darkviolet;
 }
@@ -151,8 +165,5 @@ button {
 p {
 	font-family: 'Oxygen', sans-serif;
 }
-select {
-}
-option {
-}
+
 }

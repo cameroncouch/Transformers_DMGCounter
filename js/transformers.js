@@ -121,7 +121,7 @@ const mappedTransformers = {
 		thundercrackerw1: thundercrackerw1,
 		wheeljackw1: wheeljackw1,
 };
-
+//This is dedicated to my loving wife
 /* DONE 1. Make const for all characters
 /* DONE 2. Create option for all characters
 /* DONE 3. Code a function for option select that prints the wrench value below the corresponding select box
