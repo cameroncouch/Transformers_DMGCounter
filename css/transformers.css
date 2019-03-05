@@ -1,5 +1,15 @@
+body {
+	display: flex;
+	height: 100vh;
+}
 @media (max-width: 768px) {
 /* For mobile */
+
+.boardwrap {
+	display: flex;
+	height: max-content;
+	width: max-content;
+}
 #input4 {
 	padding-top: 10px;
 }
@@ -12,8 +22,26 @@
 #purplebut {
 	display: grid;
 }
+#purpleact {
+	display: flex;
+	flex-direction: row;
+	width: max-content;
+}
+#purpleact button {
+	width: max-content;
+}
+.but {
+	width: 100%;
+}
+li {
+	width: 100%;
+}
+button {
+	width: 100%;
+}
 #purpleselect {
 	display: grid;
+	margin:0px 10px;
 }
 .heal  {
 	color: lawngreen;
@@ -36,9 +64,6 @@
 	padding-top: 2px;
 }
 
-body {
-	display: flex;
-}
 i	 {
 	font-size: 20px;
 }
@@ -66,7 +91,7 @@ button {
 	padding: 15px;
 	text-transform: uppercase;
 	box-shadow: 0px 4px 8px 0px rgba(0,0,0,1);
-	background-color: darkviolet;
+	background: darkviolet;
 }
 select {
 	box-shadow: 0px 4px 8px 0px rgba(0,0,0,1);
@@ -77,15 +102,13 @@ select {
   and (min-width: 375px) 
   and (max-width: 768px) 
   and (orientation: portrait) { 
-	body {
-		display: flex;
-		flex-direction: column;
-		margin: 0 auto;
-	}
+
 	.top2 {
 		margin: 0px;
-		width: 97%;
-		text-align: -webkit-center;
+    text-align: -webkit-center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 	}
 	.but {
 		width: 100%;

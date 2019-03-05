@@ -121,6 +121,30 @@ const mappedTransformers = {
 		thundercrackerw1: thundercrackerw1,
 		wheeljackw1: wheeljackw1,
 };
+function changeBGColor() {
+	let togBG = document.getElementById('background');
+	if (togBG.style["background"] === "linear-gradient(indigo, darkviolet)") {
+		(togBG.style["background"] = "linear-gradient(red, darkred)");
+	}
+	else if (togBG.style["background"] === "linear-gradient(red, darkred)") {
+		(togBG.style["background"] = "linear-gradient(indigo, darkviolet)");
+	}
+}
+function changeButtonColor() {
+	let togBut = document.getElementsByClassName('but');
+	for (i = 0; i < togBut.length; i++) {
+		let butCol = togBut[i].style["backgroundColor"];
+		if (butCol === "") {
+			(togBut[i].style["backgroundColor"] = "white");
+		}
+		else if (togBut[i].style["backgroundColor"] === "white") {
+			(togBut[i].style["backgroundColor"] = "darkviolet");
+		}
+		else if (togBut[i].style["backgroundColor"] === "darkviolet") {
+			(togBut[i].style["backgroundColor"] = "white");
+		}
+	}
+}
 //This is dedicated to my loving wife
 /* DONE 1. Make const for all characters
 /* DONE 2. Create option for all characters
