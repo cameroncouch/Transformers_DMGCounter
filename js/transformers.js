@@ -1,20 +1,20 @@
 //Factory function - declares a transformer character
 const Transformer = (name, title, type1, type2, type3, sword, wrench, shield, star, allegiance, mode, wave, cardno, rarity) => {
   return { 
-    name: name,
-    title: title,
-	type1: type1, //Leader, Specialist etc.
-	type2: type2, //Car, Truck, Plane, Tank, Insecticon, Dinobot, empty etc.
-	type3: type3, //Ranged, Melee etc.
-	sword: sword, //Attack #
-	wrench: wrench, //Health #
-	shield: shield, //Defense #
-	star: star, //Star cost
-	allegiance: allegiance, //Autobot, Decepticon
-	mode: mode, //Bot, Alt
-	wave: wave, //Wave 1, Wave 1S
-	cardno: cardno, //T##
-	rarity: rarity, //Common, Uncommon, Rare
+		name: name,
+		title: title,
+		type1: type1, //Leader, Specialist etc.
+		type2: type2, //Car, Truck, Plane, Tank, Insecticon, Dinobot, empty etc.
+		type3: type3, //Ranged, Melee etc.
+		sword: sword, //Attack #
+		wrench: wrench, //Health #
+		shield: shield, //Defense #
+		star: star, //Star cost
+		allegiance: allegiance, //Autobot, Decepticon
+		mode: mode, //Bot, Alt
+		wave: wave, //Wave 1, Wave 1S
+		cardno: cardno, //T##
+		rarity: rarity, //Common, Uncommon, Rare
   }
 };
 //const naming convention (No spaces, end with w1)
@@ -69,6 +69,69 @@ const sunstormw1 = Transformer('Sunstorm', 'Fusion Flyer', '1none', '2none', 'Ra
 const thundercrackerw1 = Transformer('Thundercracker', 'Mach Warrior', '1none', '2none', 'Ranged', 5, 12, 1, 8, 'Decepticon', 'Alt', '1', 'T39', 'Uncommon');
 const wheeljackw1 = Transformer('Wheeljack', 'Weapons Inventor', '1none', '2none', 'Melee', 5, 13, 1, 9, 'Autobot', 'Alt', '1', 'T40', 'Uncommon');
 
+//Wave 2 Transformers
+const acidstormw2 = Transformer('Acid Storm', 'Toxic Terror', '1none', 'Plane', 'Ranged', 3, 8, 0, 6, 'Decepticon', 'Alt', '2', 'T01', 'Rare' );
+const airraidw2 = Transformer('Air Raid', 'Fearless Flyer', 'Aerialbot', 'Plane', 'Ranged', 3, 8, 0, 5, 'Autobot', 'Alt', '2', 'T02', 'Common' );
+const alphabravow2 = Transformer('Alpha Bravo', 'Airborne Special Ops', '1none', 'Plane', 'Ranged', 2, 8, 1, 5, 'Autobot', 'Alt', '2', 'T03', 'Common' );
+const hotrodw2 = Transformer('Autobot Hot Rod', 'Impulsive Fighter', 'Sentinel', 'Car', 'Ranged', 4, 10, 2, 6, 'Autobot', 'Alt', '2', 'T04', 'Uncommon' );
+const miragew2 = Transformer('Autobot Mirage', 'Counterintelligence', 'Sentinel', 'Car', 'Specialist', 2, 10, 2, 7, 'Autobot', 'Alt', '2', 'T05', 'Uncommon' );
+const novastarw2 = Transformer('Autobot Novastar', 'Search And Rescue', 'Car', 'Truck', 'Melee', 6, 13, 3, 12, 'Autobot', 'Alt', '2', 'T06', 'Common' );
+const springerw2 = Transformer('Autobot Springer', 'Aerial Defense', '1none', 'Truck', 'Ranged', 4, 14, 2, 12, 'Autobot', 'Alt', '2', 'T07', 'Super Rare' );
+const blackwingw2 = Transformer('Blackwing', 'Aerial Attacker', 'Dreadwing', 'Plane', 'Ranged', 5, 12, 1, 8, 'Decepticon', 'Alt', '2', 'T08', 'Common' );
+const blitzwingw2 = Transformer('Blitzwing', 'Relentless Foe', '1none', 'Tank', 'Ranged', 3, 13, 2, 11, 'Decepticon', 'Alt', '2', 'T14', 'Super Rare' );
+const bluestreakw2 = Transformer('Bluestreak', 'Reluctant Soldier', '1none', 'Car', 'Melee', 0, 9, 4, 8, 'Autobot', 'Alt', '2', 'T10', 'Uncommon' );
+const blurrw2 = Transformer('Blurr', 'Fastest Bot In The Galaxy', '1none', 'Car', 'Melee', 3, 10, 2, 12, 'Autobot', 'Alt', '2', 'T11', 'Uncommon' );
+const bombshellw2 = Transformer('Bombshell', 'Decepticon Psy Ops', '1none', 'Insecticon', 'Specialist', 1, 15, 1, 11, 'Decepticon', 'Alt', '2', 'T12', 'Rare' );
+const breakdownw2 = Transformer('Breakdown', 'Paranoid Scout', 'Stunticon', 'Car', 'Specialist', 2, 7, 2, 5, 'Decepticon', 'Alt', '2', 'T13', 'Common' );
+const bumblebeew2 = Transformer('Bumblebee', 'Trusted Lieutenant', 'Leader', 'Car', 'Melee', 5, 14, 1, 10, 'Autobot', 'Alt', '2', 'T14', 'Common' );
+const deadendw2 = Transformer('Dead End', 'Doomed Loner', 'Stunticon', 'Car', 'Ranged', 2, 7, 2, 5, 'Decepticon', 'Alt', '2', 'T15', 'Common' );
+const dragstripw2 = Transformer('Decepticon Drag Strip', 'Cuttthroat Warrior', 'Stunticon', 'Car', 'Melee', 3, 7, 2, 5, 'Decepticon', 'Alt', '2', 'T16', 'Common' );
+const veninw2 = Transformer('Decepticon Venin', 'Insecticon Tyrant', 'Leader', 'Insecticon', 'Ranged', 4, 12, 2, 9, 'Decepticon', 'Alt', '2', 'T17', 'Rare' );
+const sludgew2 = Transformer('Dinobot Sludge', 'Dino Demolitions', '1none', 'Dinobot', 'Melee', 3, 12, 2, 8, 'Autobot', 'Alt', '2', 'T18', 'Rare' );
+const slugw2 = Transformer('Dinobot Slug', 'Battering Ram', '1none', 'Dinobot', 'Melee', 3, 10, 3, 8, 'Autobot', 'Alt', '2', 'T19', 'Rare' );
+const snarlw2 = Transformer('Dinobot Snarl', 'Spiked Battler', '1none', 'Dinobot', 'Melee', 3, 9, 2, 7, 'Autobot', 'Alt', '2', 'T20', 'Rare' );
+const swoopw2 = Transformer('Dinobot Swoop', 'Bombardier', '1none', 'Dinobot', 'Specialist', 3, 11, 1, 7, 'Autobot', 'Alt', '2', 'T21', 'Rare' );
+const dirgew2 = Transformer('Dirge', 'Doombringer', '1none', 'Plane', 'Ranged', 4, 11, 2, 8, 'Decepticon', 'Alt', '2', 'T22', 'Uncommon' );
+const divebombw2 = Transformer('Divebomb', 'Aerial Assault', '1none', 'Predacon', 'Specialist', 2, 7, 2, 5, 'Decepticon', 'Alt', '2', 'T23', 'Uncommon' );
+const dreadwindw2 = Transformer('Dreadwind', 'Air Defense', 'Dreadwing', 'Plane', 'Ranged', 2, 12, 3, 8, 'Decepticon', 'Alt', '2', 'T24', 'Common' );
+const fireflightw2 = Transformer('Fire Flight', 'Sky High Recon', 'Aerialbot', 'Plane', 'Ranged', 1, 7, 2, 5, 'Autobot', 'Alt', '2', 'T25', 'Common' );
+const grapplew2 = Transformer('Grapple', 'Autobot Architect', '1none', 'Truck', 'Melee', 5, 12, 2, 12, 'Autobot', 'Alt', '2', 'T26', 'Uncommon' );
+const grimlockw2 = Transformer('Grimlock', 'Powerful Commander', 'Leader', 'Dinobot', 'Melee', 4, 13, 0, 9, 'Autobot', 'Alt', '2', 'T27', 'Rare' );
+const ironhidew2 = Transformer('Ironhide', 'Steadfast Brawler', 'Sentinel', 'Truck', 'Melee', 4, 10, 2, 7, 'Autobot', 'Alt', '2', 'T28', 'Uncommon' );
+const megatronw2 = Transformer('Megatron', 'Arrogant Ruler', 'Leader', 'Tank', 'Ranged', 3, 14, 3, 10, 'Decepticon', 'Alt', '2', 'T29', 'Common' );
+const motormasterw2 = Transformer('Motormaster', 'Stunticon Leader', 'Leader', 'Stunticon', 'Truck', 2, 8, 2, 5, 'Decepticon', 'Alt', '2', 'T30', 'Common' );
+const offroadw2 = Transformer('Offroad', 'All-Terrain Soldier', 'Stunticon', 'Truck', 'Melee', 2, 6, 3, 5, 'Decepticon', 'Alt', '2', 'T31', 'Common' );
+const optimusprimew2 = Transformer('Optimus Prime', 'Gleaming Commander', 'Leader', 'Sentinel', 'Melee', 4, 15, 2, 11, 'Autobot', 'Alt', '2', 'T32', 'Uncommon' );
+const headstrongw2 = Transformer('Predacon Headstrong', 'Ground Assault', '1none', 'Predacon', 'Melee', 1, 5, 3, 5, 'Decepticon', 'Alt', '2', 'T33', 'Uncommon' );
+const rampagew2 = Transformer('Predacon Rampage', 'Savage Hunter', '1none', 'Predacon', 'Melee', 2, 7, 1, 5, 'Decepticon', 'Alt', '2', 'T34', 'Uncommon' );
+const prowlw2 = Transformer('Prowl', 'Strategic Mastermind', 'Sentinel', 'Car', 'Melee', 5, 10, 1, 7, 'Autobot', 'Alt', '2', 'T35', 'Uncommon' );
+const razorclaww2 = Transformer('Razorclaw', 'Predacon Leader', 'Leader', 'Predacon', 'Melee', 2, 8, 1, 5, 'Decepticon', 'Alt', '2', 'T36', 'Uncommon' );
+const ruckusw2 = Transformer('Ruckus', 'Combat Assault', '1none', 'Car', 'Ranged', 5, 12, 3, 11, 'Decepticon', 'Alt', '2', 'T37', 'Common' );
+const silverboltw2 = Transformer('Silverbolt', 'Aerialbot Leader', 'Aerialbot', 'Plane', 'Ranged', 2, 7, 1, 5, 'Autobot', 'Alt', '2', 'T38', 'Common' );
+const skydivew2 = Transformer('Skydive', 'Air Warfare Specialist', 'Aerialbot', 'Plane', 'Specialist', 3, 8, 2, 5, 'Autobot', 'Alt', '2', 'T39', 'Common' );
+const skywarpw2 = Transformer('Skywarp', 'Teleporting Seeker', '1none', 'Plane', 'Specialist', 4, 13, 1, 10, 'Decepticon', 'Alt', '2', 'T40', 'Rare' );
+const starscreamw2 = Transformer('Starscream', 'Decepticon King', 'Leader', 'Plane', 'Ranged', 5, 15, 2, 13, 'Decepticon', 'Alt', '2', 'T41', 'Super Rare' );
+const sunstreakerw2 = Transformer('Sunstreaker', 'Bold Warrior', 'Sentinel', 'Car', 'Specialist', 4, 10, 1, 7, 'Autobot', 'Alt', '2', 'T42', 'Uncommon' );
+const thrustw2 = Transformer('Thrust', 'Supersonic Interceptor', '1none', 'Plane', 'Ranged', 3, 11, 3, 9, 'Decepticon', 'Alt', '2', 'T43', 'Uncommon' );
+const toroxw2 = Transformer('Torox', 'Fueler', '1none', 'Predacon', 'Melee', 2, 9, 0, 5, 'Decepticon', 'Alt', '2', 'T44', 'Uncommon' );
+const warpathw2 = Transformer('Warpath', 'Confident Sharpshooter', '1none', 'Tank', 'Ranged', 4, 6, 2, 6, 'Autobot', 'Alt', '2', 'T45', 'Rare' );
+const windbladew2 = Transformer('Windblade', 'Combiner Hunter', '1none', 'Plane', 'Specialist', 5, 14, 2, 12, 'Autobot', 'Alt', '2', 'T46', 'Super Rare' );
+const scavengerw2 = Transformer('Scavenger', 'Mining And Salvage', '1none', 'Constructicon', 'Melee', 3, 5, 1, 4, 'Decepticon', 'Alt', '2', 'T05', 'Rare' );
+const scrapperw2 = Transformer('Scrapper', 'Construction Foreman', '1none', 'Constructicon', 'Melee', 3, 7, 1, 5, 'Decepticon', 'Alt', '2', 'T06', 'Rare' );
+const mixmasterw2 = Transformer('Mixmaster', 'Materials Fabrication', '1none', 'Constructicon', 'Melee', 3, 4, 2, 4, 'Decepticon', 'Alt', '2', 'T04', 'Rare' );
+const longhaulw2 = Transformer('Longhaul', 'Transport', '1none', 'Constructicon', 'Melee', 2, 6, 1, 4, 'Decepticon', 'Alt', '2', 'T03', 'Rare' );
+const hookw2 = Transformer('Hook', 'Surgical Engineer', '1none', 'Constructicon', 'Ranged', 2, 7, 0, 4, 'Decepticon', 'Alt', '2', 'T02', 'Rare' );
+const bonecrusherw2 = Transformer('Bonecrusher', 'Demolitions', '1none', 'Constructicon', 'Melee', 3, 4, 1, 4, 'Decepticon', 'Alt', '2', 'T01', 'Rare' );
+const omegasupremew2 = Transformer('Omega Supreme', 'Autobot Defense Base', 'Guardian', 'Spaceship', 'Tank', 4, 24, 2, 19, 'Autobot', 'Alt', '2', 'P2', 'Rare' );
+const windbladeRw2 = Transformer('Windblade (Rare)', 'Defender of Truth', '1none', 'Plane', 'Ranged', 2, 8, 1, 5, 'Autobot', 'Alt', '2', 'T04', 'Rare' );
+const superionw2 = Transformer('Superion', 'Sky Protector', '1none', 'Aerialbot', 'Ranged', 6, 39, 1, 25, 'Autobot', 'null', '2', 'null', 'null' );
+const predakingw2 = Transformer('Predaking', 'Ferocius Hunter', '1none', 'Predacon', 'Melee', 7, 37, 2, 25, 'Decepticon', 'null', '2', 'null', 'null' );
+const optimusmaximusw2 = Transformer('Optimus Maximus', 'Ultimate Defender', 'Leader', 'Sentinel', 'Ranged', 9, 65, 1, 25, 'Autobot', 'null', '2', 'null', 'null' );
+const menasorw2 = Transformer('Menasor', 'Menacing Colossus', '1none', 'Stunticon', 'Melee', 6, 35, 2, 25, 'Decepticon', 'null', '2', 'null', 'null' );
+const volcanicusw2 = Transformer('Volcanicus', 'Fiery Champion', '1none', 'Dinobot', 'Melee', 6, 56, 0, 25, 'Autobot', 'null', '2', 'null', 'null' );
+const devastatorw2 = Transformer('Devastator', 'Towering Warrior', '1none', 'Constructicon', 'Melee', 6, 33, 2, 25, 'Decepticon', 'null', '2', 'null', 'null' );
+const dreadwingw2 = Transformer('Dreadwing', 'Sky Destroyer', 'Dreadwing', 'Plane', 'Ranged', 7, 24, 2, 15, 'Autobot', 'null', '2', 'null', 'null' );
+
 const mappedTransformers = {
 		arceew1: arceew1,
 		cosmosw1: cosmosw1,
@@ -120,6 +183,67 @@ const mappedTransformers = {
 		sunstormw1: sunstormw1,
 		thundercrackerw1: thundercrackerw1,
 		wheeljackw1: wheeljackw1,
+		acidstormw2: acidstormw2,
+		airraidw2: airraidw2,
+		alphabravow2: alphabravow2,
+		hotrodw2: hotrodw2,
+		miragew2: miragew2,
+		novastarw2: novastarw2,
+		springerw2: springerw2,
+		blackwingw2: blackwingw2,
+		blitzwingw2: blitzwingw2,
+		bluestreakw2: bluestreakw2,
+		blurrw2: blurrw2,
+		bombshellw2: bombshellw2,
+		breakdownw2: breakdownw2,
+		bumblebeew2: bumblebeew2,
+		deadendw2: deadendw2,
+		dragstripw2: dragstripw2,
+		veninw2: veninw2,
+		sludgew2: sludgew2,
+		slugw2: slugw2,
+		snarlw2: snarlw2,
+		swoopw2: swoopw2,
+		dirgew2: dirgew2,
+		divebombw2: divebombw2,
+		dreadwindw2: dreadwindw2,
+		fireflightw2: fireflightw2,
+		grapplew2: grapplew2,
+		grimlockw2: grimlockw2,
+		ironhidew2: ironhidew2,
+		megatronw2: megatronw2,
+		motormasterw2: motormasterw2,
+		offroadw2: offroadw2,
+		optimusprimew2: optimusprimew2,
+		headstrongw2: headstrongw2,
+		rampagew2: rampagew2,
+		prowlw2: prowlw2,
+		razorclaww2: razorclaww2,
+		ruckusw2: ruckusw2,
+		silverboltw2: silverboltw2,
+		skydivew2: skydivew2,
+		skywarpw2: skywarpw2,
+		starscreamw2: starscreamw2,
+		sunstreakerw2: sunstreakerw2,
+		headstrongw2: headstrongw2,
+		toroxw2: toroxw2,
+		warpathw2: warpathw2,
+		windbladew2: windbladew2,
+		scavengerw2: scavengerw2,
+		scrapperw2: scrapperw2,
+		longhaulw2: longhaulw2,
+		mixmasterw2: mixmasterw2,
+		hookw2: hookw2,
+		bonecrusherw2: bonecrusherw2,
+		omegasupremew2: omegasupremew2,
+		windbladeRw2: windbladeRw2,
+		superionw2: superionw2,
+		predakingw2: predakingw2,
+		optimusmaximusw2: optimusmaximusw2,
+		menasorw2: menasorw2,
+		volcanicusw2: volcanicusw2,
+		devastatorw2: devastatorw2,
+		dreadwingw2: dreadwingw2
 };
 function changeBGColor() {
 	let togBG = document.getElementById('background');
@@ -151,6 +275,7 @@ function toggleSelectList1() {
 		(tog1.style.visibility = "visible");
 	} else if (tog1.style.visibility === "visible") {
 		tog1.style.visibility = "hidden";
+		document.getElementById("input1").innerHTML = " ";
 	} else {
 		console.log(false);
 	}
@@ -161,6 +286,7 @@ if (tog2.style.visibility === "hidden") {
 	(tog2.style.visibility = "visible");
 } else if (tog2.style.visibility === "visible") {
 	tog2.style.visibility = "hidden";
+	document.getElementById("input2").innerHTML = " ";
 } else {
 	console.log(false);
 }
@@ -171,6 +297,7 @@ if (tog3.style.visibility === "hidden") {
 	(tog3.style.visibility = "visible");
 } else if (tog3.style.visibility === "visible") {
 	tog3.style.visibility = "hidden";
+	document.getElementById("input3").innerHTML = " ";
 } else {
 	console.log(false);
 }
@@ -181,6 +308,7 @@ if (tog4.style.visibility === "hidden") {
 	(tog4.style.visibility = "visible");
 } else if (tog4.style.visibility === "visible") {
 	tog4.style.visibility = "hidden";
+	document.getElementById("input4").innerHTML = " ";
 } else {
 	console.log(false);
 }
@@ -193,34 +321,25 @@ audio.play();
 
 function getHealth1() {
 	let selectedTransformer = document.getElementById("top1").value;
-
 	document.getElementById("input1").innerHTML = mappedTransformers[selectedTransformer].wrench;
 	console.log(mappedTransformers[selectedTransformer].wrench);
 }
 function getHealth2() {
-let selectedTransformer = document.getElementById("top2").value;
-
-
-document.getElementById("input2").innerHTML = mappedTransformers[selectedTransformer].wrench;
-console.log(mappedTransformers[selectedTransformer].wrench);
+	let selectedTransformer = document.getElementById("top2").value;
+	document.getElementById("input2").innerHTML = mappedTransformers[selectedTransformer].wrench;
+	console.log(mappedTransformers[selectedTransformer].wrench);
 }
 function getHealth3() {
-let selectedTransformer = document.getElementById("top3").value;
-
-document.getElementById("input3").innerHTML = mappedTransformers[selectedTransformer].wrench;
-console.log(mappedTransformers[selectedTransformer].wrench);
+	let selectedTransformer = document.getElementById("top3").value;
+	document.getElementById("input3").innerHTML = mappedTransformers[selectedTransformer].wrench;
+	console.log(mappedTransformers[selectedTransformer].wrench);
 }
 
 function getHealth4() {
-let selectedTransformer = document.getElementById("top4").value;
-
-document.getElementById("input4").innerHTML = mappedTransformers[selectedTransformer].wrench;
-console.log(mappedTransformers[selectedTransformer].wrench);
+	let selectedTransformer = document.getElementById("top4").value;
+	document.getElementById("input4").innerHTML = mappedTransformers[selectedTransformer].wrench;
+	console.log(mappedTransformers[selectedTransformer].wrench);
 }		
-//Code below is functionality for hiding health on de - selecting of transformer-- >
-function hideHealth1() {
-
-}
 //Code below is functionality for Damage / Heal buttons-- >
 	function add1() {
 		let selectedTransformer = document.getElementById("top1").value;
@@ -302,7 +421,7 @@ let newNumber = parseInt(txtNumber) + 1;
 if (newNumber <= mappedTransformers[selectedTransformer].wrench) {
 
 	document.getElementById("input4").innerHTML = parseInt(txtNumber) + 1;
-}
+} 
 else {
 	console.log(false);
 }
