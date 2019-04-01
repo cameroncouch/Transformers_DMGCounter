@@ -245,6 +245,7 @@ const mappedTransformers = {
 		devastatorw2: devastatorw2,
 		dreadwingw2: dreadwingw2
 };
+console.log(mappedTransformers);
 function changeBGColor() {
 	let togBG = document.getElementById('background');
 	if (togBG.style["background"] === "linear-gradient(indigo, darkviolet)") {
